@@ -1,7 +1,7 @@
-
-import cat from "./cat.jpg";
-import "../public/App.css";
+import cat from "./assets/cat.jpg";
+import "../public/css/App.css";
 import { useState } from "react";
+import Header from "./Header";
 
 function NameBox() {
   return (
@@ -78,6 +78,7 @@ function PreviousProjectsBox() {
 function App() {
   return (
     <div className="App">
+      <Header />
       <div className="name-section">
         <NameBox />
       </div>
