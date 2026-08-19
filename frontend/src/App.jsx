@@ -6,16 +6,10 @@ import Header from "./Header";
 function NameBox() {
   return (
     <div className="top-section">
-      <img
-        src={cat}
-        className="personal-picture"
-        alt="personal-picture"
-      />
+      <img src={cat} className="personal-picture" alt="personal-picture" />
       <div className="mini1">
         <h1>Felix Underwood</h1>
-        <h3>
-          Software Engineer | Computer Science Graduate
-        </h3>
+        <h3>Software Engineer | Computer Science Graduate</h3>
       </div>
     </div>
   );
@@ -41,12 +35,9 @@ function SingleProjectBox({ name, tech, description }) {
           : "single-project-box project-box-mouseOff"
       }
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}>
-      <img
-        src={cat}
-        className="personal-picture"
-        alt="personal-picture"
-      />
+      onMouseLeave={handleMouseLeave}
+    >
+      <img src={cat} className="personal-picture" alt="personal-picture" />
       <div className="proj-text">
         <div className="proj-headers">
           <h1>{name}</h1>

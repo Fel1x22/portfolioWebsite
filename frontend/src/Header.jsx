@@ -1,18 +1,17 @@
-import linkedin from "./assets/linkedin-svgrepo-com.svg"
+import linkedin from "./assets/linkedin-svgrepo-com.svg";
 
 export default function Header() {
   return (
     <div className="header-container ">
-    <div className="header-left">
-      <h2>Felix's Portfolio</h2>
-      <a>CV Download</a>
-    </div>
-    <div className="header-right">
-      <div className="linkedin-logo">
-        <img src={linkedin} />
+      <div className="header-left">
+        <h2>Felix's Portfolio</h2>
+        <a>CV Download</a>
       </div>
-      
+      <div className="header-right">
+        <div className="linkedin-logo">
+          <img src={linkedin} />
+        </div>
+      </div>
     </div>
-  </div>
-  )
+  );
 }
