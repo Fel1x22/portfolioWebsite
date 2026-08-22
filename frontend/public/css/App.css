@@ -14,7 +14,7 @@
     opacity: 0;
   }
   to {
-    opacity: 1.0;
+    opacity: 1;
   }
 }
 
@@ -48,11 +48,11 @@
 }
 
 .mini1 h1 {
-  color: #C88FFF;
+  color: #c88fff;
 }
 
 .mini1 h3 {
-  color: #D8B5FF
+  color: #d8b5ff;
 }
 
 .top-section img {
@@ -164,7 +164,7 @@
   width: 40px;
   height: 40px;
   padding: 2px;
-  background-color: #C88FFF;
+  background-color: #c88fff;
   border-radius: 4px;
   background-repeat: no-repeat;
   display: flex;
@@ -175,7 +175,7 @@
 .cv-download {
   width: 100px;
   border-radius: 10px;
-  background-color: #C88FFF;
+  background-color: #c88fff;
   color: #000000;
   font-weight: 800;
   font-size: 12px;
