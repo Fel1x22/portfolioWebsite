@@ -40,10 +40,8 @@ function SingleProjectBox({ name, tech, description }) {
     >
       <img src={cat} className="personal-picture" alt="personal-picture" />
       <div className="proj-text">
-        <div className="proj-headers">
-          <h1>{name}</h1>
-          <h3>{tech}</h3>
-        </div>
+        <h1>{name}</h1>
+        <h2>{tech}</h2>
         <p>{description}</p>
       </div>
     </div>
@@ -54,13 +52,18 @@ function PreviousProjectsBox() {
   return (
     <div className="projects-box">
       <SingleProjectBox
-        name={"3D Rendering Algorithm"}
+        name={"Novel 3D Rendering Algorithm"}
         tech={"OpenGL, GLSL, Python"}
         description={"hello put a desc here pls."}
       />
       <SingleProjectBox
         name={"Backend Banking API"}
         tech={"Python, FastAPI, PostgreSQL, Pytest"}
+        description={"hello put a desc here pls."}
+      />
+      <SingleProjectBox
+        name={"Website Scraper and Analyser"}
+        tech={"Python, Selenium, BeautifulSoup"}
         description={"hello put a desc here pls."}
       />
     </div>
