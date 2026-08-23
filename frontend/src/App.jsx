@@ -18,6 +18,7 @@ function NameBox() {
 
 function SingleProjectBox({ name, tech, description }) {
   const [isHover, setIsHover] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHover(true);
@@ -27,24 +28,52 @@ function SingleProjectBox({ name, tech, description }) {
     setIsHover(false);
   };
 
+  const toggleExpanded = () => {
+    if (isExpanded) {
+      setIsExpanded(false);
+    } else {
+      setIsExpanded(true);
+    }
+  };
+
   return (
     <div
       //className="single-project-box"
-      className={
-        isHover
-          ? " single-project-box project-box-mouseOn"
-          : "single-project-box project-box-mouseOff"
-      }
+      className={`single-project-box ${isHover ? "project-box-mouseOn" : "project-box-mouseOff"} ${isExpanded ? "project-box-expanded" : ""}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <img src={cat} className="personal-picture" alt="personal-picture" />
       <div className="proj-text">
-        <div className="proj-headers">
-          <h1>{name}</h1>
-          <h3>{tech}</h3>
-        </div>
-        <p>{description}</p>
+        <h1>{name}</h1>
+        <h2>{tech}</h2>
+        {isExpanded && <p>{description}</p>}
+      </div>
+      <div className="button-div">
+        <button
+          className="expand-button"
+          type="button"
+          onClick={toggleExpanded}
+        >
+          <i
+            className={`bi ${isExpanded ? "bi-chevron-up" : "bi-chevron-down"}`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+              />
+            </svg>
+          </i>
+        </button>
       </div>
     </div>
   );
@@ -54,13 +83,20 @@ function PreviousProjectsBox() {
   return (
     <div className="projects-box">
       <SingleProjectBox
-        name={"3D Rendering Algorithm"}
+        name={"Novel 3D Rendering Algorithm"}
         tech={"OpenGL, GLSL, Python"}
-        description={"hello put a desc here pls."}
+        description={
+          "For my final year project at university, I researched and created a new rendering technique for showing black and white textures in 3D. "
+        }
       />
       <SingleProjectBox
         name={"Backend Banking API"}
         tech={"Python, FastAPI, PostgreSQL, Pytest"}
+        description={"hello put a desc here pls."}
+      />
+      <SingleProjectBox
+        name={"Website Scraper and Analyser"}
+        tech={"Python, Selenium, BeautifulSoup"}
         description={"hello put a desc here pls."}
       />
     </div>

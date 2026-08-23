@@ -65,27 +65,33 @@
 
 .projects-box {
   width: 100%;
-  height: 2000px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  gap: 20px;
-  border-radius: 5px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  gap: 5vh;
 }
 
 .single-project-box {
   background-color: #260f5c;
-  width: 90%;
-  height: 400px;
+  width: 80%;
+  height: 30vh;
   display: flex;
-  flex-direction: row;
   justify-content: left;
-  align-items: center;
   padding: 10px;
   gap: 20px;
   border-radius: 5px;
+  transition: 0.5s;
+  animation: fade-in 2s;
+}
+
+.single-project-box p {
+  animation: fade-in 2s;
+}
+
+.project-box-expanded {
+  height: 40vh;
 }
 
 .project-box-mouseOn {
@@ -105,16 +111,20 @@
   box-shadow: 2px 2px 5px;
 }
 
-.proj-text {
+.button-div {
+  width: 20px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: start;
 }
 
-.proj-headers {
+.proj-text {
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  text-align: left;
+  flex: 1;
 }
 
 .header-container {
@@ -173,10 +183,9 @@
 }
 
 .cv-download {
-  width: 100px;
-  border-radius: 10px;
-  background-color: #c88fff;
   color: #000000;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
 }
