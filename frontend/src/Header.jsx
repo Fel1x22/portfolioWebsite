@@ -10,19 +10,29 @@ export default function Header() {
       </div>
       <div className="header-right">
         <a
-          href="./assets/Felix_Underwood.pdf"
+          target="_blank"
+          href="https://drive.google.com/uc?export=download&id=18qrOMHRWMQ2LpsVuZtO9B9VL6rfRQWSG"
           download
           className="social-box cv-download"
         >
           CV
         </a>
-        <a href="mailto:felixsunderwood@gmail.com" className="social-box">
+        <a
+          target="_blank"
+          href="mailto:felixsunderwood@gmail.com"
+          className="social-box"
+        >
           <img src={email} height="30px" width="30px" />
         </a>
-        <a href="https://github.com/Fel1x22" className="social-box">
+        <a
+          target="_blank"
+          href="https://github.com/Fel1x22"
+          className="social-box"
+        >
           <img src={github} height="30px" width="30px" />
         </a>
         <a
+          target="_blank"
           href="https://www.linkedin.com/in/felixunderwood/"
           className="social-box"
         >
