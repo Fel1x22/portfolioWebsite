@@ -155,12 +155,12 @@ a {
   font-size: 30px;
 }
 
-.header-left {
+.header-left h2 {
   height: 100%;
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: 1200;
+  font-weight: 900;
 }
 
 .header-right {
@@ -192,6 +192,10 @@ a {
   align-items: center;
 }
 
+.social-box:hover {
+  transform: scale(1.05);
+}
+
 .cv-download {
   color: #000000;
   font-weight: 800;
@@ -202,6 +206,7 @@ a {
 
 .project-picture {
   height: 100%;
+  aspect-ratio: 1;
   object-fit: cover;
   border-radius: 10px;
   overflow: hidden;

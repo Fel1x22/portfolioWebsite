@@ -1,9 +1,14 @@
+import cat from "./assets/cat.jpg";
 import Me from "./assets/Felix.jpeg";
 import "../public/css/App.css";
 import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import CubeSpin from "./assets/CubeSpin.mov";
+import BankingAPI from "./assets/BankingAPI.png";
+import HLTVMatches from "./assets/HLTV-Matches.png";
+import Eventlite from "./assets/Eventlite.png";
+import intervU from "./assets/IntervU.png";
 
 function NameBox() {
   return (
@@ -24,6 +29,8 @@ function SingleProjectBox({
   description,
   isExpanded,
   setIsExpanded,
+  image=null,
+  video=null,
 }) {
   const [isHover, setIsHover] = useState(false);
 
@@ -50,10 +57,15 @@ function SingleProjectBox({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/*<img src={cat} className="project-picture" alt="personal-picture" />*/}
-      <video autoPlay muted loop>
-        <source src={CubeSpin} type="video/mp4" />
-      </video>
+      {image && (
+        <img src={image} className="project-picture" alt="personal-picture" />
+      )}
+      {video && (
+        <video className="project-picture" autoPlay muted loop>
+          <source src={video} type="video/mp4" />
+        </video>
+      )}
+      
       <div className="proj-text">
         <h1>{name}</h1>
         <h2>{tech}</h2>
@@ -115,6 +127,7 @@ function PreviousProjectsBox() {
         description={`For my final year project at university, I researched and created a new rendering technique for showing black and white textures in 3D. This built off the work of <a target="_blank" href='https://www.youtube.com/watch?v=HPqGaIMVuLs'>Rune Johansen</a>. My work involved generalising this technique to a matrix of texture instead of dots, allowing for higher levels of detail and awareness of the texture's structure to be shown. This also allows for the detail shown to increase as the camera approaches the surface, improving performance over standard rendering. This produced higher accuracy textures than standard dithering methods, and I was delighted to achieve a mark of 74% for the project.`}
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
+        video={CubeSpin}
       />
       <SingleProjectBox
         name={"Backend Banking API"}
@@ -124,6 +137,7 @@ function PreviousProjectsBox() {
         }
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
+        image={BankingAPI}
       />
       <SingleProjectBox
         name={"Website Scraper and Analyser"}
@@ -133,6 +147,7 @@ function PreviousProjectsBox() {
         }
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
+        image={HLTVMatches}
       />
       <SingleProjectBox
         name={"Eventlite: Event Planning App"}
@@ -142,6 +157,7 @@ function PreviousProjectsBox() {
         }
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
+        image={Eventlite}
       />
       <SingleProjectBox
         name={"IntervU: Interview Preparation Site"}
@@ -151,6 +167,7 @@ function PreviousProjectsBox() {
         }
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
+        image={intervU}
       />
     </div>
   );
