@@ -1,19 +1,17 @@
 import linkedin from "./assets/linkedin-svgrepo-com.svg";
 import github from "./assets/github-142-svgrepo-com.svg";
 import email from "./assets/email-svgrepo-com.svg";
-import { TextHighlight } from 'react-text-underline';
+import { TextHighlight } from "react-text-underline";
 
 export default function Header() {
   return (
     <div className="header-container ">
       <div className="header-left">
-      <h2 className="site-name">
-        <TextHighlight
-          variant="gradient"
-          color="neonPurple"
-        >
-        Felix's Portfolio
-        </TextHighlight></h2>
+        <h2 className="site-name">
+          <TextHighlight variant="gradient" color="neonPurple">
+            Felix's Portfolio
+          </TextHighlight>
+        </h2>
       </div>
       <div className="header-right">
         <a

@@ -1,4 +1,3 @@
-import cat from "./assets/cat.jpg";
 import Me from "./assets/Felix.jpeg";
 import "../public/css/App.css";
 import { useState } from "react";
@@ -29,8 +28,8 @@ function SingleProjectBox({
   description,
   isExpanded,
   setIsExpanded,
-  image=null,
-  video=null,
+  image = null,
+  video = null,
 }) {
   const [isHover, setIsHover] = useState(false);
 
@@ -65,7 +64,7 @@ function SingleProjectBox({
           <source src={video} type="video/mp4" />
         </video>
       )}
-      
+
       <div className="proj-text">
         <h1>{name}</h1>
         <h2>{tech}</h2>
